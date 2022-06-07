@@ -17,10 +17,7 @@ rm -rf ./dist ; mkdir ./dist
 mkdir -p $PWD/dist/docker
 
 # Build
-docker run -it \
--v $PWD:/app \
---name cockpit-docker \
-local/cockpit-docker:latest
+docker run -it -v $PWD:/app --name local/cockpit-docker:latest local/cockpit-docker:latest
 
 # Remove user module dir
 rm -rf $HOME/.local/share/cockpit/docker
