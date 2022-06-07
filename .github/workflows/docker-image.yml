@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: sudo apt install cockpit && sudo ./install
+      run: sudo apt install cockpit && sudo ./install && sudo docker images
