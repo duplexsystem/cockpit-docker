@@ -5,7 +5,7 @@ command -v docker >/dev/null 2>&1 || { echo >&2 "I require docker but it's not i
 command -v cockpit-bridge >/dev/null 2>&1 || { echo >&2 "I require cockpit but it's not installed.  Aborting."; exit 1; }
 
 # Build 
-docker build -t cockpit-docker .
+docker build -t local/cockpit-docker:latest .
 
 # Remove container if exists
 docker rm -f cockpit-docker
@@ -20,7 +20,7 @@ mkdir -p $PWD/dist/docker
 docker run -it \
 -v $PWD:/app \
 --name cockpit-docker \
-cockpit-docker
+local/cockpit-docker:latest
 
 # Remove user module dir
 rm -rf $HOME/.local/share/cockpit/docker
