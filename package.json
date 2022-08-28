@@ -73,7 +73,7 @@
     "raw-loader": "^0.5.1",
     "sass-loader": "^8.0.2",
     "sass-resources-loader": "^2.0.1",
-    "sizzle": "^2.1.0",
+    "sizzle": "^2.3.6",
     "stdio": "^0.2.7",
     "strict-loader": "^1.1.0",
     "style-loader": "^0.13.1",
